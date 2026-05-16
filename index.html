@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Osobista, romantyczna strona-niespodzianka pełna ciepła, zdjęć i małych animowanych chwil."
+    />
+    <title>Dla Ciebie</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-glow" aria-hidden="true"></div>
+    <div class="floating-hearts" aria-hidden="true"></div>
+    <div class="stars" aria-hidden="true"></div>
+    <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+    <!-- Tutaj mozesz podmienic plik muzyki na wlasny: assets/music.mp3 -->
+    <audio id="love-song" src="assets/music.mp3" preload="none" loop></audio>
+
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="Powrót na początek">Dla Ciebie</a>
+      <button class="music-toggle" type="button" aria-pressed="false">
+        <span class="music-icon" aria-hidden="true">♪</span>
+        <span>Muzyka</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="section hero" id="home">
+        <div class="hero-content">
+          <p class="eyebrow reveal">kliknij, jeśli chcesz zobaczyć coś pięknego</p>
+          <h1 class="hero-title reveal">Dla najpiękniejszej osoby w moim świecie</h1>
+          <!-- Tutaj mozesz zmienic tekst powitalny. -->
+          <p class="hero-copy reveal">
+            Zrobiłem tę stronę tylko dla Ciebie, żebyś mogła zobaczyć, jak wyjątkowa jesteś dla mnie.
+          </p>
+          <a class="primary-button reveal" href="#poem-one">
+            Zacznij naszą małą podróż
+            <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+        <a class="scroll-cue" href="#poem-one" aria-label="Przewiń dalej">
+          <span></span>
+        </a>
+      </section>
+
+      <section class="section story-grid" id="poem-one">
+        <article class="poem-card reveal">
+          <p class="section-kicker">Pierwszy wierszyk</p>
+          <!-- Tutaj mozesz zmienic wierszyk. -->
+          <h2>Jesteś jak ciepło w środku dnia</h2>
+          <p>
+            Gdy patrzę na Ciebie, świat robi się ciszej,<br />
+            jakby chciał słuchać tego, co czuję.<br />
+            Masz w sobie światło, którego nie trzeba tłumaczyć,<br />
+            i spokój, do którego moje serce zawsze wraca.
+          </p>
+          <p>
+            Dziękuję, że jesteś w moim życiu tak prawdziwie,<br />
+            z uśmiechem, który potrafi zostać ze mną na cały dzień.
+          </p>
+        </article>
+
+        <figure class="photo-frame reveal parallax-photo">
+          <!-- Podmien zdjecie w folderze images/photo1.jpg -->
+          <img src="images/photo1.jpg" alt="Twoje ulubione zdjęcie" />
+          <figcaption>Mały kadr wielkiego zachwytu</figcaption>
+        </figure>
+      </section>
+
+      <section class="section" id="reasons">
+        <div class="section-heading reveal">
+          <p class="section-kicker">Dlaczego jesteś wyjątkowa</p>
+          <h2>Bo przy Tobie nawet zwykłe chwile mają swój blask</h2>
+        </div>
+        <div class="reason-grid">
+          <article class="reason-card reveal">
+            <span>01</span>
+            <p>Twój uśmiech potrafi poprawić mi każdy dzień</p>
+          </article>
+          <article class="reason-card reveal">
+            <span>02</span>
+            <p>Przy Tobie zwykłe chwile stają się wyjątkowe</p>
+          </article>
+          <article class="reason-card reveal">
+            <span>03</span>
+            <p>Masz w sobie coś, czego nie da się opisać jednym zdaniem</p>
+          </article>
+          <article class="reason-card reveal">
+            <span>04</span>
+            <p>Jesteś moim spokojem, radością i najpiękniejszą myślą</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section story-grid reverse" id="poem-two">
+        <figure class="photo-frame reveal parallax-photo">
+          <!-- Podmien zdjecie w folderze images/photo2.jpg -->
+          <img src="images/photo2.jpg" alt="Wspomnienie z pięknego dnia" />
+          <figcaption>Tu zaczyna się kolejna piękna historia</figcaption>
+        </figure>
+
+        <article class="poem-card reveal">
+          <p class="section-kicker">Drugi wierszyk</p>
+          <!-- Tutaj mozesz zmienic wierszyk. -->
+          <h2>Z Tobą dzień ma miękkie światło</h2>
+          <p>
+            Nie potrzebuję wielkich planów ani idealnych miejsc,<br />
+            kiedy obok jesteś Ty.<br />
+            Wystarczy spacer, rozmowa, cisza po długim dniu,<br />
+            a wszystko nagle staje się trochę bardziej nasze.
+          </p>
+          <p>
+            I właśnie za to kocham te zwykłe chwile:<br />
+            bo z Tobą żadna z nich nie jest zwyczajna.
+          </p>
+        </article>
+      </section>
+
+      <section class="section gallery-section" id="moments">
+        <div class="section-heading reveal">
+          <p class="section-kicker">Nasze chwile</p>
+          <h2>Każde zdjęcie to tylko mały fragment tego, jak wiele dla mnie znaczysz.</h2>
+        </div>
+        <div class="gallery">
+          <figure class="gallery-card reveal">
+            <!-- Podmien zdjecie w folderze images/photo1.jpg -->
+            <img src="images/photo1.jpg" alt="Wspólne wspomnienie 1" />
+          </figure>
+          <figure class="gallery-card reveal">
+            <!-- Podmien zdjecie w folderze images/photo2.jpg -->
+            <img src="images/photo2.jpg" alt="Wspólne wspomnienie 2" />
+          </figure>
+          <figure class="gallery-card reveal">
+            <!-- Podmien zdjecie w folderze images/photo3.jpg -->
+            <img src="images/photo3.jpg" alt="Wspólne wspomnienie 3" />
+          </figure>
+          <figure class="gallery-card reveal">
+            <!-- Podmien zdjecie w folderze images/photo4.jpg -->
+            <img src="images/photo4.jpg" alt="Wspólne wspomnienie 4" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="section poem-center" id="poem-three">
+        <article class="poem-card narrow reveal">
+          <p class="section-kicker">Trzeci wierszyk</p>
+          <!-- Tutaj mozesz zmienic wierszyk. -->
+          <h2>Do Ciebie wracam myślami</h2>
+          <p>
+            Są miejsca, do których wraca się bez mapy,<br />
+            i osoby, które zostają w sercu bez pytania.<br />
+            Ty jesteś właśnie takim ciepłym adresem,<br />
+            myślą, która przychodzi i od razu robi mi dobrze.
+          </p>
+        </article>
+      </section>
+
+      <section class="section finale" id="finale">
+        <div class="finale-content reveal">
+          <p class="finale-truth">Na końcu tej strony jest tylko jedna prawda...</p>
+          <!-- Tutaj mozesz zmienic glowny napis finalowy. -->
+          <h2 class="love-title">Kocham Cię</h2>
+          <p class="finale-copy">
+            Nie dlatego, że jesteś idealna dla świata, ale dlatego, że jesteś idealna dla mojego serca.
+          </p>
+          <button class="special-button" type="button">Pokaż serduszka</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
